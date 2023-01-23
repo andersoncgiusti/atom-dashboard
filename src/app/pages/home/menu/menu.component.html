@@ -1,0 +1,109 @@
+<mat-drawer-container class="container" autosize>
+
+  <mat-drawer #drawer class="sidenav" mode="side">
+
+    <mat-toolbar class="header-sidebar">
+      <mat-toolbar-row>
+        <img src="../../../../assets/images/atom-header.png" height="30px">
+        <span class="text-atom-sidebar">Atom technology<br><p class="subtitle-sidebar">Software house</p></span>
+      </mat-toolbar-row>
+    </mat-toolbar>
+
+    <div class="logo">
+      <img src="../../../../assets/images/ap.jpeg" alt="" height="100px">
+    </div>
+
+    <div class="sidebar">
+      <mat-list>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faHome"></fa-icon>
+          <div>
+            <span class="list">Dashboard</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faPen"></fa-icon>
+          <div>
+            <span class="list">Texto</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faPhotoVideo"></fa-icon>
+          <div class="insta-div">
+            <span class="list">Mídias</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faEnvelope"></fa-icon>
+          <div>
+            <span class="list">E-mails</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faInbox"></fa-icon>
+          <div>
+            <span class="list">Mensagens</span>
+          </div>
+        </mat-list-item>
+
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <fa-icon class="icon-list" [icon]="faUser"></fa-icon>
+          <div>
+            <span class="list">Perfil</span>
+          </div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+    </div>
+  </mat-drawer>
+
+  <mat-toolbar class="header">
+    <mat-toolbar-row>
+      <fa-icon class="buttons" [icon]="faBars" (click)="drawer.toggle(); open();" *ngIf="openMenu"></fa-icon>
+      <fa-icon class="buttons-close" [icon]="faAngleLeft" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
+      <span class="spacer"></span>
+      <img src="../../../../assets/images/atom-header.png" height="40px">
+      <span class="text-atom">Atom technology<br><p class="subtitle">Software house</p></span>
+      <span class="spacer"></span>
+      <fa-icon class="faSignOutAlt" [icon]="faSignOutAlt" (click)="drawer.toggle()"></fa-icon>
+    </mat-toolbar-row>
+  </mat-toolbar>
+
+  <div class="header-mobile-div">
+    <mat-toolbar-row>
+      <mat-toolbar class="header-mobile">
+          <fa-icon class="buttons" [icon]="faBars" (click)="drawer.toggle(); open();" *ngIf="openMenu"></fa-icon>
+          <fa-icon class="buttons-close" [icon]="faTimes" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
+      </mat-toolbar>
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <fa-icon class="faEllipsisV" [icon]="faEllipsisV"></fa-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <fa-icon class="faSignOutAltMenu" [icon]="faSignOutAlt"></fa-icon>
+          <span>Logaut</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
+  </div>
+
+</mat-drawer-container>
+
+
+
+
+
+
