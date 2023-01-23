@@ -146,9 +146,17 @@ mat-icon {
 }
 
 .header-mobile-div {
-  padding: 1rem;
+  padding-top: 0.8rem;
   cursor: pointer;
   display: none;
+}
+
+.faEllipsisV {
+  color: whitesmoke;
+}
+
+.faSignOutAltMenu{
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 600px) {

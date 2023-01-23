@@ -79,10 +79,25 @@
   </mat-toolbar>
 
   <div class="header-mobile-div">
-    <mat-toolbar class="header-mobile">
-        <fa-icon class="buttons" [icon]="faBars" (click)="drawer.toggle(); open();" *ngIf="openMenu"></fa-icon>
-        <fa-icon class="buttons-close" [icon]="faTimes" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
-    </mat-toolbar>
+    <mat-toolbar-row>
+      <mat-toolbar class="header-mobile">
+          <fa-icon class="buttons" [icon]="faBars" (click)="drawer.toggle(); open();" *ngIf="openMenu"></fa-icon>
+          <fa-icon class="buttons-close" [icon]="faTimes" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
+      </mat-toolbar>
+
+      <span class="spacer"></span>
+
+      <button mat-icon-button [matMenuTriggerFor]="menu">
+        <fa-icon class="faEllipsisV" [icon]="faEllipsisV"></fa-icon>
+      </button>
+
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <fa-icon class="faSignOutAltMenu" [icon]="faSignOutAlt"></fa-icon>
+          <span>Logaut</span>
+        </button>
+      </mat-menu>
+    </mat-toolbar-row>
   </div>
 
 </mat-drawer-container>
