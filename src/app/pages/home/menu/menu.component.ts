@@ -9,7 +9,8 @@ import {
   faBars,
   faSignOutAlt,
   faTimes,
-  faAngleLeft
+  faAngleLeft,
+  faEllipsisV
  } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -17,6 +18,7 @@ import {
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
+
 export class MenuComponent implements OnInit {
 
   // declarations icons fontawesome
@@ -30,6 +32,7 @@ export class MenuComponent implements OnInit {
   faSignOutAlt = faSignOutAlt;
   faTimes = faTimes;
   faAngleLeft = faAngleLeft;
+  faEllipsisV = faEllipsisV;
 
   // display for menu
   showFiller = false;
@@ -62,7 +65,11 @@ export class MenuComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    const url = 'https://api.instagram.com/oauth/authorize?client_id=1542398922939986&redirect_uri=https://localhost:4200/&scope=user_profile,user_media &response_type=code';
+    const a = 'https://api.instagram.com/oauth/authorize ?client_id=990602627938098 &redirect_uri=https://socialsizzle.herokuapp.com/auth/ &scope=user_profile,user_media &response_type=code';
+    console.log(a);
+    console.log(url);
   }
 
 }
