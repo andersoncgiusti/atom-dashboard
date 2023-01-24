@@ -10,7 +10,7 @@
     </mat-toolbar>
 
     <div class="logo">
-      <img src="../../../../assets/images/ap.jpeg" alt="" height="100px">
+      <img class="img" src="../../../../assets/images/ap.jpeg" alt="" height="100px" matTooltip="AP | ARQUITETURA & INTERIORES">
     </div>
 
     <div class="sidebar">
@@ -82,7 +82,7 @@
     <mat-toolbar-row>
       <mat-toolbar class="header-mobile">
           <fa-icon class="buttons" [icon]="faBars" (click)="drawer.toggle(); open();" *ngIf="openMenu"></fa-icon>
-          <fa-icon class="buttons-close" [icon]="faTimes" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
+          <fa-icon class="buttons-close" [icon]="faAngleLeft" (click)="drawer.toggle(); close();" *ngIf="closeMenu"></fa-icon>
       </mat-toolbar>
 
       <span class="spacer"></span>

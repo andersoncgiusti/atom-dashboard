@@ -52,6 +52,12 @@ mat-drawer-container {
   padding: 2rem;
 }
 
+.img {
+  -webkit-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.75);
+  box-shadow: 0px 4px 11px -3px rgba(0,0,0,0.75);
+}
+
 .logo > img {
   border-radius: 10px;
 }
@@ -160,6 +166,10 @@ mat-icon {
 
 .faSignOutAltMenu{
   margin-right: 10px;
+}
+
+.none {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
